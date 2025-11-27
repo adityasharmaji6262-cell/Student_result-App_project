@@ -1,25 +1,8 @@
 # Student_result-App_project
 A simple React + JSON Server CRUD application to manage student results. Supports adding, editing, deleting, viewing details, searching, and filtering students. Built using functional components, useState, useEffect, and Fetch API.
 Project structure-->
-student-result-app/
-│
-├── db.json                   # JSON Server database storing students
-│
-├── src/
-│   ├── components/
-│   │   ├── StudentList.jsx   # Shows all students + search, filter, delete
-│   │   ├── StudentForm.jsx   # Add & Edit form
-│   │   └── StudentDetails.jsx# View full student info
-│   │
-│   ├── services/
-│   │   └── studentService.js # API calls (GET/POST/PUT/DELETE)
-│   │
-│   ├── App.jsx               # Main app, state manager, screen controller
-│   ├── index.js              # React entry point
-│   └── styles.css            # Custom UI styling
-│
-└── public/
-    └── index.html
+<img width="1041" height="638" alt="image" src="https://github.com/user-attachments/assets/08a59cfa-ea63-4f6a-aa9e-b933bd1e5166" />
+
 
 How the App Works
 🔹 App.jsx
