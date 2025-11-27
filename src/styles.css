@@ -1,0 +1,174 @@
+/* Simple modern CSS - Google Classroom like */
+
+:root{
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --accent: #60a5fa;
+  --success: #16a34a;
+  --danger: #ef4444;
+  --shadow: 0 6px 18px rgba(32,33,36,0.06);
+  --radius: 10px;
+  --max-width: 980px;
+  --gap: 16px;
+  --glass: rgba(255,255,255,0.6);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+html,body,#root{ height:100%; background: linear-gradient(180deg,#f8fafc,#f3f4f6); margin:0; }
+
+.app{
+  max-width: var(--max-width);
+  margin: 36px auto;
+  padding: 24px;
+}
+
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: var(--gap);
+  margin-bottom: 20px;
+}
+
+.title{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.title h1{
+  margin:0;
+  font-size:24px;
+  color:#0f172a;
+}
+.subtitle{ color:var(--muted); font-size:13px; margin-top:4px; }
+
+.card{
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.controls{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+
+.btn{
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor:pointer;
+  font-weight:600;
+  box-shadow: 0 4px 8px rgba(37,99,235,0.12);
+}
+.btn.secondary{
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid rgba(37,99,235,0.12);
+  box-shadow:none;
+}
+.btn.danger{ background: var(--danger); box-shadow:none; }
+.btn.small{ padding:6px 8px; font-size:14px; border-radius:6px; }
+
+.search{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  background: #f8fafc;
+  padding:8px;
+  border-radius:8px;
+  border:1px solid #e6eef9;
+}
+
+.search input{
+  border:0;
+  outline:none;
+  background:transparent;
+  min-width:180px;
+  font-size:14px;
+  color:#0f172a;
+}
+
+.table-wrap{ overflow:auto; margin-top:14px; }
+
+.table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:700px;
+}
+
+.table th, .table td{
+  text-align:left;
+  padding:10px 12px;
+  border-bottom:1px solid #f1f5f9;
+  font-size:14px;
+  color:#0f172a;
+}
+
+.table thead th{
+  font-weight:700;
+  font-size:13px;
+  color:#0b1220;
+}
+
+.row-actions button{ margin-right:6px; }
+
+.form-row{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:10px; }
+.form-row .field{ flex:1; min-width:160px; }
+
+label{ display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+input[type="text"], input[type="number"]{
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #e6eef9;
+  box-shadow:none;
+  outline:none;
+  font-size:14px;
+  background: #fbfdff;
+}
+
+.form-actions{ margin-top:8px; display:flex; gap:8px; }
+
+.kv{ color:var(--muted); font-size:14px; margin-bottom:6px; }
+
+.center{ text-align:center; }
+
+.spinner{
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  border:3px solid rgba(0,0,0,0.08);
+  border-top-color: var(--primary);
+  animation: spin 1s linear infinite;
+  display:inline-block;
+}
+.lg-spinner{
+  width:36px;
+  height:36px;
+  border-width:4px;
+}
+
+@keyframes spin{ to { transform: rotate(360deg); } }
+
+.empty{ color:var(--muted); padding:18px; }
+
+.card-title{ display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
+
+.footer-note{ color:var(--muted); font-size:13px; margin-top:14px; }
+
+.badge{ background:#eef2ff; color:var(--primary); padding:6px 8px; border-radius:999px; font-size:13px; }
+
+.actions-row{ display:flex; gap:8px; align-items:center; }
+
+.small-muted{ color:var(--muted); font-size:12px; }
+
+.table tr:hover{ background: linear-gradient(90deg, rgba(245,247,250,0.6), transparent); }
+
+@media (max-width:720px){
+  .title h1{ font-size:18px; }
+  .app{ padding:14px; margin:12px; }
+  .table{ min-width:600px; }
+}
